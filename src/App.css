@@ -1,0 +1,92 @@
+:root{
+  --tableHeadBg: #59c181;
+  --tableHeadTextCol: #fff;
+  --tableHeadBorderCol: #ccc;
+  --tableHeadPadding: 4px;
+  --countryColWidth: 150px;
+  --tableHeadTextSize: 14px;
+  
+  --tableBodyBg: #333;
+  --tableBodyTextCol: #fff;
+  --tableBodyBorderCol: #ccc;
+  --tableBodyPadding: 20px;
+  --tableBodyTextSize: 18px;
+  
+  --borderSize: 1px;
+  --tableMarginBottom: 10px;
+}
+
+.container{
+  max-width: 2314px; /* 1528px for 2 col max */
+  width: 100%;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 750px);
+  gap: 32px;
+}
+h1,h2{
+  padding: 10px;
+}
+h1{
+  text-align: center;
+}
+/*  */
+/*  */
+.country{
+  width: var(--countryColWidth);
+}
+table {
+  /* max-width: 750px; */
+  width: 100%;
+  overflow: hidden;
+  background-color: var(--tableBodyBg);;
+  border-collapse: separate;
+  border-width: var(--borderSize);
+  border-color: var(--tableBodyBorderCol);
+  border-style: solid;
+  color: var(--tableBodyTextCol);
+  text-align: center;
+  margin-bottom: var(--tableMarginBottom);
+}
+
+table td, th {
+  border-width: var(--borderSize);
+  border-color: var(--tableHeadBorderCol);
+  border-style: solid;
+}
+table thead {
+  background-color: var(--tableHeadBg);
+  color: var(--tableHeadTextCol);
+}
+thead > tr > td{
+  padding: var(--tableHeadPadding);
+  font-size: var(--tableHeadTextSize);
+}
+tbody > tr > td{
+  padding: var(--tableBodyPadding);
+  font-size: var(--tableBodyTextSize);
+}
+/*  */
+@media (max-width: 2336px){
+  .container{
+    max-width: 1564px;
+  }
+}
+@media (max-width: 1585px){
+  .container{
+    max-width: 750px;
+  }
+}
+@media (max-width: 767px){
+  .container{
+    display: block;
+  }
+  .hideOnMobile{
+    display: none;
+ }
+}
+@media (max-width: 370px){
+  .hideOnTiny {
+    display: none;
+  }
+}
