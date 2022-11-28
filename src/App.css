@@ -1,19 +1,17 @@
 :root{
-  --tableHeadBg: #121211;
-  --tableHeadTextCol: #EEEAEE;
-  --tableHeadBorderCol: #EEE9ED;
+  --tableHeadBg: #f7f7f7;
+  --tableHeadTextCol: #333;
+  --tableHeadBorderCol: #333;
   --tableHeadPadding: 4px;
   --tableHeadTextSize: 14px;
   
-  --tableBodyBg: #F7f7f7;
+  /* --tableBodyBg: #F7f7f7; */
   --tableBodyTextCol: #121211;
   --tableBodyBorderCol: #EEE9ED;
   --tableBodyPadding: 20px;
   --tableBodyTextSize: 24px;
   
-  --countryRowStatsColWidth: 150px;
   --countryRowStatsTextSize: 22px;
-  --countryRowMatchesColWidth: 35%;
   --countryRowMatchesTextSize: 22px;
 
   --borderSize: 1px;
@@ -24,7 +22,6 @@
   --showBtnTextCol: #f1f1f1;
   --hideBtnBg: #f76957;
   --hideBtnHoverBg: #f8804d;
-  /* --hideBtnHoverBg: #e33a3e; */
   --hideBtnTextCol: #f1f1f1;
 }
 
@@ -68,14 +65,6 @@ h1{
 }
 /*  */
 /*  */
-.countryRowStats{
-  width: var(--countryRowStatsColWidth);
-  font-size: var(--countryRowStatsTextSize);
-}
-.countryRowMatches{
-  width: var(--countryRowMatchesColWidth);
-  font-size: var(--countryRowMatchesTextSize);
-}
 
 table {
   /* max-width: 750px; */
@@ -107,6 +96,29 @@ tbody > tr > td{
   padding: var(--tableBodyPadding);
   font-size: var(--tableBodyTextSize);
 }
+
+.countryRowStats{
+  width: 170px;
+  font-size: var(--countryRowStatsTextSize);
+}
+.countryRowMatches{
+  font-size: var(--countryRowMatchesTextSize);
+}
+.blank{
+  background-color: transparent;
+  border: 0px;
+}
+.score{
+  background-color: var(--showBtnHoverBg);
+  color: white;
+  letter-spacing: 4px;
+}
+table.matches td{
+  width: 25%;
+}
+
+
+
 /*  */
 @media (max-width: 2336px){
   .container{
@@ -133,9 +145,35 @@ tbody > tr > td{
   .hideOnMobile{
     display: none;
  }
-}
-@media (max-width: 370px){
-  .hideOnTiny {
-    display: none;
+ table.matches{
+    width: 100%;
+ }
+ table.matches .score{
+    width: 20%;
+ }
+  table.matches td{
+    width: 40%;
   }
+}
+@media (max-width: 460px){
+  :root{
+    --tableBodyTextSize: 18px;
+    --countryRowStatsTextSize: 16px;
+    --countryRowMatchesTextSize: 16px;
+    --tableBodyPadding: 10px;
+  }
+  table.matches{
+    width: 100%;
+    /* display: flex; */
+    /* flex-direction: column; */
+ }
+  table.matches .teamA{
+    min-width: 40%;
+  }
+  /* table.matches .score{
+    min-width: 0%;
+  }
+  table.matches .teamB{
+    min-width: 0%;
+  } */
 }

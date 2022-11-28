@@ -19,7 +19,7 @@ function Stats(props: Props) {
       <table>
         <thead>
         <tr>
-          <td>{/* Country */}</td>
+          <td className="blank">{/* Country */}</td>
           <td className="hideOnMobile">Played</td>
           <td>Win</td>
           <td>Draw</td>
