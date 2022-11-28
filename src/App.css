@@ -1,23 +1,26 @@
 :root{
-  --tableHeadBg: #59c181;
-  --tableHeadTextCol: #fff;
-  --tableHeadBorderCol: #ccc;
+  --tableHeadBg: #E48E83;
+  --tableHeadTextCol: #EEEAEE;
+  --tableHeadBorderCol: #EEE9ED;
   --tableHeadPadding: 4px;
   --countryColWidth: 150px;
   --tableHeadTextSize: 14px;
   
-  --tableBodyBg: #333;
-  --tableBodyTextCol: #fff;
-  --tableBodyBorderCol: #ccc;
+  --tableBodyBg: #F6BA0C;
+  --tableBodyTextCol: #121211;
+  --tableBodyBorderCol: #EEE9ED;
   --tableBodyPadding: 20px;
   --tableBodyTextSize: 18px;
   
   --borderSize: 1px;
   --tableMarginBottom: 10px;
 
-  --showBtnBg: green;
+  --showBtnBg: #62c3a1;
+  --showBtnHoverBg: #339975;
   --showBtnTextCol: white;
-  --hideBtnBg: red;
+  --hideBtnBg: #f38b7f;
+  --hideBtnHoverBg: #f76957;
+  /* --hideBtnHoverBg: #e33a3e; */
   --hideBtnTextCol: white;
 }
 
@@ -47,9 +50,17 @@ h1{
   background: var(--showBtnBg);
   color: var(--showBtnTextCol);
 }
+.showBtn:hover{
+  background: var(--showBtnHoverBg); 
+  color: var(--hideBtnTextCol);
+}
 .hideBtn{
   background: var(--hideBtnBg); 
   color: var(--hideBtnTextCol);
+}
+.hideBtn:hover{
+  background: var(--hideBtnHoverBg);
+  color: var(--showBtnTextCol); 
 }
 /*  */
 /*  */
