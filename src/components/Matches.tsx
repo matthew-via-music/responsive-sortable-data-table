@@ -1,3 +1,5 @@
+import { useEffect, useState } from "react"
+
 interface Props {
   TeamA: string,
   TeamB: string,
@@ -6,6 +8,12 @@ interface Props {
 }
 
 function Matches(props: Props) {
+  const [mobile, setMobile] = useState(false)
+  
+  useEffect(() => {
+    window.innerWidth <= 767 ? setMobile(true) : setMobile(false)
+  }, [])
+
   const {TeamA, TeamB, Score, MatchDate} = props
 
   return (
@@ -13,19 +21,19 @@ function Matches(props: Props) {
       <table>
         <thead>
         <tr>
-          <td className="country"></td>
-          <td>Score</td>
-          <td className="country"></td>
-          <td className="hideOnTiny">Match Date</td>
+          <td className="countryRowMatches"></td>
+          <td className="score">{!mobile && "Score"}</td>
+          <td></td>
+          <td className="hideOnMobile">Match Date</td>
         </tr>
-        </thead>      
+        </thead>
 
         <tbody>
         <tr>
-          <td>{TeamA}</td>
-          <td>{Score}</td>
+          <td className="countryRowMatches">{TeamA}</td>
+          <td className="score">{Score}</td>
           <td>{TeamB}</td>
-          <td className="hideOnTiny">{MatchDate}</td>
+          <td className="hideOnMobile">{MatchDate}</td>
         </tr>
       </tbody>
       </table>

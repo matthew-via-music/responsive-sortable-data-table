@@ -19,8 +19,8 @@ function Stats(props: Props) {
       <table>
         <thead>
         <tr>
-          <td className="country">{/* Country */}</td>
-          <td className="hideOnTiny">Played</td>
+          <td>{/* Country */}</td>
+          <td className="hideOnMobile">Played</td>
           <td>Win</td>
           <td>Draw</td>
           <td className="hideOnMobile">Lose</td>
@@ -35,8 +35,8 @@ function Stats(props: Props) {
 {/*  */}
         <tbody>
         <tr>
-          <td>{Country}</td>
-          <td className="hideOnTiny">{Played}</td>
+          <td className="countryRowStats">{Country}</td>
+          <td className="hideOnMobile">{Played}</td>
           <td>{Win}</td>
           <td>{Draw}</td>
           <td className="hideOnMobile">{Lose}</td>
