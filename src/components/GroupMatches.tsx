@@ -1,8 +1,8 @@
-import data from "./groupAMatches.json"
 import Matches from './Matches'
 
 interface Props {
   Group: string,
+  GroupMatchesData: any[]
   // id: number,
   // TeamA: string,
   // Score: string,
@@ -10,13 +10,13 @@ interface Props {
   // MatchDate: string
 }
 
-function GroupAMatches(props: Props) {
-  const {Group} = props
+function GroupMatches(props: Props) {
+  const {Group, GroupMatchesData} = props
   return (
     <>
     <h2>Group {Group} Matches</h2>
 
-    {data && data.map(({ id, TeamA, Score, TeamB, MatchDate }) => 
+    {GroupMatchesData && GroupMatchesData.map(({ id, TeamA, Score, TeamB, MatchDate }) => 
       <Matches 
         key={id}
         TeamA={TeamA}
@@ -29,5 +29,5 @@ function GroupAMatches(props: Props) {
   )
 }
 
-export default GroupAMatches
+export default GroupMatches
   

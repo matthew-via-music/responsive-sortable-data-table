@@ -1,10 +1,16 @@
 import { useState, useEffect } from 'react';
 import './App.css'
-import GroupAStats from './components/GroupAStats'
-import GroupAMatches from './components/GroupAMatches'
+
+import GroupStats from './components/GroupStats'
+import GroupMatches from './components/GroupMatches'
+import Buttons from './components/Buttons'
+
+import GroupAStatsData from "./data/groupAStats.json"
+import GroupAMatchesData from "./data/groupAMatches.json"
+
 function App() {
   
-  const [matches, setMatches] = useState(
+  const [UILayoutFormat, setUILayoutFormat] = useState(
     window.matchMedia("(min-width: 2336px)").matches
   )
   const [toggleGroups, setToggleGroups] = useState(false)
@@ -13,42 +19,36 @@ function App() {
   useEffect(() => {
     window
     .matchMedia("(min-width: 2336px)")
-    .addEventListener('change', e => setMatches( e.matches ))
+    .addEventListener('change', e => setUILayoutFormat( e.matches ))
   }, [])
 
   return (
     <>
      <h1>World Cup 2022</h1>
     
-     <div className="container collapse">
-       <button className={toggleGroups ? "showBtn" : "hideBtn"} onClick={() => setToggleGroups(x => !x)}>{toggleGroups ? "Show Groups" : "Hide Groups"}</button>
-       <button className={toggleMatches ? "showBtn" : "hideBtn"} onClick={() => setToggleMatches(x => !x)}>{toggleMatches ? "Show Matches" : "Hide Matches"}</button>
-     </div>
+     <Buttons toggleGroups={toggleGroups} toggleMatches={toggleMatches} setToggleGroups={setToggleGroups} setToggleMatches={setToggleMatches} />
 
      <div className="container">
-      {matches && 
+      {UILayoutFormat && 
         <>
-          <div className={`${toggleGroups ? "toggleHideGroups" : ""}`}><GroupAStats Group="A" /></div>
-          <div className={`${toggleGroups ? "toggleHideGroups" : ""}`}><GroupAStats Group="B" /></div>
-          <div className={`${toggleGroups ? "toggleHideGroups" : ""}`}><GroupAStats Group="C" /></div>
-          <div className={`${toggleMatches ? "toggleHideMatches" : ""}`}><GroupAMatches Group="A" /></div>
-          <div className={`${toggleMatches ? "toggleHideMatches" : ""}`}><GroupAMatches Group="B" /></div>
-          <div className={`${toggleMatches ? "toggleHideMatches" : ""}`}><GroupAMatches Group="C" /></div>
+          <div className={`${toggleGroups ? "toggleHideGroups" : ""}`}><GroupStats Group="A" GroupStatsData={GroupAStatsData}/></div>
+          <div className={`${toggleGroups ? "toggleHideGroups" : ""}`}><GroupStats Group="B" GroupStatsData={GroupAStatsData}/></div>
+          <div className={`${toggleGroups ? "toggleHideGroups" : ""}`}><GroupStats Group="C" GroupStatsData={GroupAStatsData}/></div>
+          <div className={`${toggleMatches ? "toggleHideMatches" : ""}`}><GroupMatches Group="A" GroupMatchesData={GroupAMatchesData} /></div>
+          <div className={`${toggleMatches ? "toggleHideMatches" : ""}`}><GroupMatches Group="B" GroupMatchesData={GroupAMatchesData} /></div>
+          <div className={`${toggleMatches ? "toggleHideMatches" : ""}`}><GroupMatches Group="C" GroupMatchesData={GroupAMatchesData} /></div>
         </>
       }
-      {!matches && 
+      {!UILayoutFormat && 
         <>
-          <div className={`${toggleGroups ? "toggleHideGroups" : ""}`}><GroupAStats Group="A" /></div>
-          <div className={`${toggleMatches ? "toggleHideMatches" : ""}`}><GroupAMatches Group="A" /></div>
-          <div className={`${toggleGroups ? "toggleHideGroups" : ""}`}><GroupAStats Group="B" /></div>
-          <div className={`${toggleMatches ? "toggleHideMatches" : ""}`}><GroupAMatches Group="B" /></div>
-          <div className={`${toggleGroups ? "toggleHideGroups" : ""}`}><GroupAStats Group="C" /></div>
-          <div className={`${toggleMatches ? "toggleHideMatches" : ""}`}><GroupAMatches Group="C" /></div>
+          <div className={`${toggleGroups ? "toggleHideGroups" : ""}`}><GroupStats Group="A" GroupStatsData={GroupAStatsData}/></div>
+          <div className={`${toggleMatches ? "toggleHideMatches" : ""}`}><GroupMatches Group="A" GroupMatchesData={GroupAMatchesData} /></div>
+          <div className={`${toggleGroups ? "toggleHideGroups" : ""}`}><GroupStats Group="B" GroupStatsData={GroupAStatsData} /></div>
+          <div className={`${toggleMatches ? "toggleHideMatches" : ""}`}><GroupMatches Group="B" GroupMatchesData={GroupAMatchesData} /></div>
+          <div className={`${toggleGroups ? "toggleHideGroups" : ""}`}><GroupStats Group="C" GroupStatsData={GroupAStatsData} /></div>
+          <div className={`${toggleMatches ? "toggleHideMatches" : ""}`}><GroupMatches Group="C" GroupMatchesData={GroupAMatchesData} /></div>
         </>
       }
-          
-
-     
       {/* \container */}
       </div>
     </>

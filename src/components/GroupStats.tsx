@@ -1,8 +1,8 @@
-import data from "./groupAStats.json"
 import Stats from './Stats'
 
 interface Props {
   Group: string,
+  GroupStatsData: any[]
   // id: number,
   // Country: string,
   // Played: number, 
@@ -16,13 +16,13 @@ interface Props {
   // AdvanceToNextRound: string,
 }
 
-function GroupAStats(props: Props) {
-  const {Group} = props
+function GroupStats(props: Props) {
+  const {Group, GroupStatsData} = props
   return (
     <>
     <h2>Group {Group}</h2>
 
-    {data && data.map(({ id, Country, Played, Win, Draw, Lose, Points, GoalsFor, GoalsAgainst, GoalDifference, AdvanceToNextRound }) => 
+    {GroupStatsData && GroupStatsData.map(({ id, Country, Played, Win, Draw, Lose, Points, GoalsFor, GoalsAgainst, GoalDifference, AdvanceToNextRound }) => 
       <Stats
         key={id}
         Country={Country}
@@ -41,4 +41,4 @@ function GroupAStats(props: Props) {
   )
 }
 
-export default GroupAStats
+export default GroupStats
