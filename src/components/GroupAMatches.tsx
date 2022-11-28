@@ -1,8 +1,14 @@
 import Matches from './Matches'
 
-function GroupAMatches( ) {
+interface Props {
+  Group: string,
+}
+
+function GroupAMatches(props: Props) {
+  const {Group} = props
   return (
     <>
+    <h2>Group {Group} Matches</h2>
       <Matches 
         TeamA="Qatar"
         Score="0:2"

@@ -1,9 +1,15 @@
 import Stats from './Stats'
 
-function GroupAStats() {
+interface Props {
+  Group: string,
+}
+
+function GroupAStats(props: Props) {
+  const {Group} = props
   return (
     <>
-     <Stats 
+    <h2>Group {Group}</h2>
+     <Stats
         Country="Netherlands"
         Played={2}
         Win={1}
