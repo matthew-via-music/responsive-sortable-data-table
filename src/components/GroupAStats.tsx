@@ -1,7 +1,19 @@
+import data from "./groupAStats.json"
 import Stats from './Stats'
 
 interface Props {
   Group: string,
+  // id: number,
+  // Country: string,
+  // Played: number, 
+  // Win: number, 
+  // Draw: number, 
+  // Lose: number, 
+  // Points: number, 
+  // GoalsFor: number, 
+  // GoalsAgainst: number, 
+  // GoalDifference: number, 
+  // AdvanceToNextRound: string,
 }
 
 function GroupAStats(props: Props) {
@@ -9,54 +21,22 @@ function GroupAStats(props: Props) {
   return (
     <>
     <h2>Group {Group}</h2>
-     <Stats
-        Country="Netherlands"
-        Played={2}
-        Win={1}
-        Draw={1}
-        Lose={0}
-        Points={4}
-        GoalsFor={3}
-        GoalsAgainst={1}
-        GoalDifference={2}
-        AdvanceToNextRound="Yes"
+
+    {data && data.map(({ id, Country, Played, Win, Draw, Lose, Points, GoalsFor, GoalsAgainst, GoalDifference, AdvanceToNextRound }) => 
+      <Stats
+        key={id}
+        Country={Country}
+        Played={Played}
+        Win={Win}
+        Draw={Draw}
+        Lose={Lose}
+        Points={Points}
+        GoalsFor={GoalsFor}
+        GoalsAgainst={GoalsAgainst}
+        GoalDifference={GoalDifference}
+        AdvanceToNextRound={AdvanceToNextRound}
       />
-     <Stats 
-        Country="Ecuador"
-        Played={2}
-        Win={1}
-        Draw={1}
-        Lose={0}
-        Points={4}
-        GoalsFor={3}
-        GoalsAgainst={1}
-        GoalDifference={2}
-        AdvanceToNextRound="Yes"
-      />
-     <Stats 
-        Country="Senegal"
-        Played={2}
-        Win={1}
-        Draw={0}
-        Lose={1}
-        Points={3}
-        GoalsFor={3}
-        GoalsAgainst={3}
-        GoalDifference={0}
-        AdvanceToNextRound="No"
-      />
-     <Stats 
-        Country="Qatar"
-        Played={2}
-        Win={0}
-        Draw={0}
-        Lose={2}
-        Points={0}
-        GoalsFor={1}
-        GoalsAgainst={5}
-        GoalDifference={-4}
-        AdvanceToNextRound="No"
-      />
+    )}
     </>
   )
 }

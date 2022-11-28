@@ -1,7 +1,13 @@
+import data from "./groupAMatches.json"
 import Matches from './Matches'
 
 interface Props {
   Group: string,
+  // id: number,
+  // TeamA: string,
+  // Score: string,
+  // TeamB: string,
+  // MatchDate: string
 }
 
 function GroupAMatches(props: Props) {
@@ -9,42 +15,16 @@ function GroupAMatches(props: Props) {
   return (
     <>
     <h2>Group {Group} Matches</h2>
+
+    {data && data.map(({ id, TeamA, Score, TeamB, MatchDate }) => 
       <Matches 
-        TeamA="Qatar"
-        Score="0:2"
-        TeamB="Ecuador"
-        MatchDate="20.11.22"
+        key={id}
+        TeamA={TeamA}
+        Score={Score}
+        TeamB={TeamB}
+        MatchDate={MatchDate}
       />
-      <Matches 
-        TeamA="Senegal"
-        Score="0:2"
-        TeamB="Netherlands"
-        MatchDate="21.11.22"
-      />
-      <Matches 
-        TeamA="Qatar"
-        Score="1:3"
-        TeamB="Senegal"
-        MatchDate="25.11.22"
-      />
-      <Matches 
-        TeamA="Netherlands"
-        Score="1:1"
-        TeamB="Ecuador"
-        MatchDate="25.11.22"
-      />
-      <Matches 
-        TeamA="Netherlands"
-        Score="-:-"
-        TeamB="Qatar"
-        MatchDate="29.11.22"
-      />
-      <Matches 
-        TeamA="Ecuador"
-        Score="-:-"
-        TeamB="Senegal"
-        MatchDate="29.11.22"
-      />
+    )}
     </>
   )
 }

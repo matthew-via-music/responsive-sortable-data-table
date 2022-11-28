@@ -1,0 +1,44 @@
+[
+  {
+    "id": 1,
+    "TeamA": "Qatar",
+    "Score": "0:2",
+    "TeamB": "Ecuador",
+    "MatchDate": "20.11.22"
+  },
+  {
+    "id": 2,
+    "TeamA": "Senegal",
+    "Score": "0:2",
+    "TeamB": "Netherlands",
+    "MatchDate": "21.11.22"
+  },
+  {
+    "id": 3,
+    "TeamA": "Qatar",
+    "Score": "1:3",
+    "TeamB": "Senegal",
+    "MatchDate": "25.11.22"
+  },
+  {
+    "id": 4,
+    "TeamA": "Netherlands",
+    "Score": "1:1",
+    "TeamB": "Ecuador",
+    "MatchDate": "25.11.22"
+  },
+  {
+    "id": 5,
+    "TeamA": "Netherlands",
+    "Score": "-:-",
+    "TeamB": "Qatar",
+    "MatchDate": "29.11.22"
+  },
+  {
+    "id": 6,
+    "TeamA": "Ecuador",
+    "Score": "-:-",
+    "TeamB": "Senegal",
+    "MatchDate": "29.11.22"
+  }
+]
