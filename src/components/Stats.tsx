@@ -1,4 +1,5 @@
 interface Props {
+  Flag?: string,
   Country?: string,
   Played: number,
   Win: number,
@@ -12,14 +13,13 @@ interface Props {
 }
 
 function Stats(props: Props) {
-  const {Country, Played, Win, Draw, Lose, Points, GoalsFor, GoalsAgainst, GoalDifference, AdvanceToNextRound} = props
-
+  const {Flag, Country, Played, Win, Draw, Lose, Points, GoalsFor, GoalsAgainst, GoalDifference, AdvanceToNextRound} = props
   return (
     <>
       <table>
         <thead>
         <tr>
-          <td className="blank">{/* Country */}</td>
+          <td style={{backgroundImage: `url(${Flag})`}} className="flag">{/* Country Flag */}</td>
           <td className="hideOnMobile">Played</td>
           <td>Win</td>
           <td>Draw</td>

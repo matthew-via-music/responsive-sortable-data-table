@@ -1,6 +1,7 @@
 [
   {
     "id": 1,
+    "Flag": "",
     "Country": "",
     "Played": 0,
     "Win": 0,
@@ -14,6 +15,7 @@
   },
   {
     "id": 2,
+    "Flag": "",
     "Country": "",
     "Played": 0,
     "Win": 0,
@@ -27,6 +29,7 @@
   },
   {
     "id": 3,
+    "Flag": "",
     "Country": "",
     "Played": 0,
     "Win": 0,
@@ -40,6 +43,7 @@
   },
   {
     "id": 4,
+    "Flag": "",
     "Country": "",
     "Played": 0,
     "Win": 0,

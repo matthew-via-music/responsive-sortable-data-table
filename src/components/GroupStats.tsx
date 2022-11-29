@@ -4,6 +4,7 @@ interface Props {
   Group: string,
   GroupStatsData: any[]
   // id: number,
+  // Flag: string,
   // Country: string,
   // Played: number, 
   // Win: number, 
@@ -22,9 +23,10 @@ function GroupStats(props: Props) {
     <>
     <h2>Group {Group}</h2>
 
-    {GroupStatsData && GroupStatsData.map(({ id, Country, Played, Win, Draw, Lose, Points, GoalsFor, GoalsAgainst, GoalDifference, AdvanceToNextRound }) => 
+    {GroupStatsData && GroupStatsData.map(({ id, Flag, Country, Played, Win, Draw, Lose, Points, GoalsFor, GoalsAgainst, GoalDifference, AdvanceToNextRound }) => 
       <Stats
         key={id}
+        Flag={Flag}
         Country={Country}
         Played={Played}
         Win={Win}

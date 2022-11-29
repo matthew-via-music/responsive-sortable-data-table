@@ -9,6 +9,7 @@
   --tableBodyTextCol: #121211;
   --tableBodyBorderCol: #EEE9ED;
   --tableBodyPadding: 20px;
+  --tableMatchesBodyPadding: 18px;
   --tableBodyTextSize: 24px;
   
   --countryRowStatsTextSize: 22px;
@@ -91,6 +92,10 @@ table thead {
   background-color: var(--tableHeadBg);
   color: var(--tableHeadTextCol);
 }
+/* control the flag size */
+table:not(table.matches) > thead > tr > td{
+  height: 75px;
+}
 thead > tr > td{
   padding: var(--tableHeadPadding);
   font-size: var(--tableHeadTextSize);
@@ -98,6 +103,9 @@ thead > tr > td{
 tbody > tr > td{
   padding: var(--tableBodyPadding);
   font-size: var(--tableBodyTextSize);
+}
+table.matches > tbody > tr > td{
+  padding: var(--tableMatchesBodyPadding);
 }
 
 .countryRowStats{
@@ -107,9 +115,13 @@ tbody > tr > td{
 .countryRowMatches{
   font-size: var(--countryRowMatchesTextSize);
 }
-.blank{
+.flag{
   background-color: transparent;
   border: 0px;
+  /* background-image: url(->dynamically inserted via react prop<-); */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
 }
 .score{
   background-color: var(--showBtnHoverBg);
@@ -119,7 +131,10 @@ tbody > tr > td{
 table.matches td{
   width: 25%;
 }
-
+/* empty <td> above team A and B (matches) */
+.blank{
+  border: 0;
+}
 
 
 /*  */
@@ -148,10 +163,14 @@ table.matches td{
   .hideOnMobile{
     display: none;
  }
- table.matches{
+ /* control the flag size */
+  /* table > thead > tr > td{
+    height: 55px;
+ } */
+  table.matches{
     width: 100%;
  }
- table.matches .score{
+  table.matches .score{
     width: 20%;
  }
   table.matches td{
@@ -164,6 +183,7 @@ table.matches td{
     --countryRowStatsTextSize: 16px;
     --countryRowMatchesTextSize: 16px;
     --tableBodyPadding: 10px;
+    --tableMatchesBodyPadding: 10px;
   }
   table.matches{
     width: 100%;

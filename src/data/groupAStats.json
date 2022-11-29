@@ -1,6 +1,7 @@
 [
   {
     "id": 1,
+    "Flag": "https://images.sports.gracenote.com/images/lib/basic/geo/country/flag/large/2201.png",
     "Country": "Netherlands",
     "Played": 2,
     "Win": 1,
@@ -14,6 +15,7 @@
   },
   {
     "id": 2,
+    "Flag": "https://images.sports.gracenote.com/images/lib/basic/geo/country/flag/large/4333.png",
     "Country": "Ecuador",
     "Played": 2,
     "Win": 1,
@@ -27,6 +29,7 @@
   },
   {
     "id": 3,
+    "Flag": "https://images.sports.gracenote.com/images/lib/basic/geo/country/flag/large/4375.png",
     "Country": "Senegal",
     "Played": 2,
     "Win": 1,
@@ -40,6 +43,7 @@
   },
   {
     "id": 4,
+    "Flag": "https://images.sports.gracenote.com/images/lib/basic/geo/country/flag/large/9640.png",
     "Country": "Qatar",
     "Played": 2,
     "Win": 0,
