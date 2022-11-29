@@ -167,8 +167,8 @@ table.matches td{
     --tableBodyTextSize: 18px;
     --countryRowStatsTextSize: 18px;
     --countryRowMatchesTextSize: 18px;
-    --tableBodyPadding: 10px;
-    --tableMatchesBodyPadding: 10px;
+    --tableBodyPadding: 10px 0;
+    --tableMatchesBodyPadding: 10px 0;
   }
   .container{
     display: block;
@@ -199,8 +199,8 @@ table.matches td{
     /* --tableBodyTextSize: 18px; */
     /* --countryRowStatsTextSize: 16px; */
     /* --countryRowMatchesTextSize: 16px; */
-    --tableBodyPadding: 10px;
-    --tableMatchesBodyPadding: 10px;
+    --tableBodyPadding: 10px 0;
+    --tableMatchesBodyPadding: 10px 0;
   }
   .hideOnMobile{
     display: none;
@@ -226,15 +226,23 @@ table.matches td{
     --tableBodyTextSize: 14px;
     /* --countryRowStatsTextSize: 16px; */
     --countryRowMatchesTextSize: 16px;
-    --tableBodyPadding: 10px;
+    --tableBodyPadding: 10px 0;
   }
   table.tabletStatsUi > thead > tr > td{
     font-size: 40px;
  }
+  /*  */
+  table.matches .teamA{
+    min-width: 40%;
+  }
+  table.matches .score{
+    min-width: 10%;
+  }
+  /*  */
 }
 @media (max-width: 340px){
   :root{
-    --tableBodyPadding: 5px;
+    --tableBodyPadding: 5px 0;
   }
   table.tabletStatsUi > thead > tr > td{
     font-size: 30px;
@@ -242,7 +250,7 @@ table.matches td{
 }
 @media (max-width: 310px){
   :root{
-    --tableBodyPadding: 1px;
+    --tableBodyPadding: 1px 0;
     --countryRowStatsTextSize: 16px;
     --countryRowMatchesTextSize: 14px;
   }
