@@ -1,44 +1,44 @@
 [
   {
     "id": 1,
-    "TeamA": "",
-    "Score": "",
-    "TeamB": "",
-    "MatchDate": ""
+    "TeamA": "Switzerland",
+    "Score": "1:0",
+    "TeamB": "Cameroon",
+    "MatchDate": "24.11.22"
   },
   {
     "id": 2,
-    "TeamA": "",
-    "Score": "",
-    "TeamB": "",
-    "MatchDate": ""
+    "TeamA": "Brazil",
+    "Score": "2:0",
+    "TeamB": "Serbia",
+    "MatchDate": "24.11.22"
   },
   {
     "id": 3,
-    "TeamA": "",
-    "Score": "",
-    "TeamB": "",
-    "MatchDate": ""
+    "TeamA": "Cameroon",
+    "Score": "3:3",
+    "TeamB": "Serbia",
+    "MatchDate": "28.11.22"
   },
   {
     "id": 4,
-    "TeamA": "",
-    "Score": "",
-    "TeamB": "",
-    "MatchDate": ""
+    "TeamA": "Brazil",
+    "Score": "1:0",
+    "TeamB": "Switzerland",
+    "MatchDate": "28.11.22"
   },
   {
     "id": 5,
-    "TeamA": "",
-    "Score": "",
-    "TeamB": "",
-    "MatchDate": ""
+    "TeamA": "Serbia",
+    "Score": "-:-",
+    "TeamB": "Switzerland",
+    "MatchDate": "02.12.22"
   },
   {
     "id": 6,
-    "TeamA": "",
-    "Score": "",
-    "TeamB": "",
-    "MatchDate": ""
+    "TeamA": "Cameroon",
+    "Score": "-:-",
+    "TeamB": "Brazil",
+    "MatchDate": "02.12.22"
   }
 ]

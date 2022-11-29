@@ -30,14 +30,14 @@
   {
     "id": 5,
     "TeamA": "Netherlands",
-    "Score": "-:-",
+    "Score": "2:0",
     "TeamB": "Qatar",
     "MatchDate": "29.11.22"
   },
   {
     "id": 6,
     "TeamA": "Ecuador",
-    "Score": "-:-",
+    "Score": "1:2",
     "TeamB": "Senegal",
     "MatchDate": "29.11.22"
   }

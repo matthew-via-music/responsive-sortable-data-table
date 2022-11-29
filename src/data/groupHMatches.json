@@ -1,44 +1,44 @@
 [
   {
     "id": 1,
-    "TeamA": "",
-    "Score": "",
-    "TeamB": "",
-    "MatchDate": ""
+    "TeamA": "Uruguay",
+    "Score": "0:0",
+    "TeamB": "Korea Republic",
+    "MatchDate": "24.11.22"
   },
   {
     "id": 2,
-    "TeamA": "",
-    "Score": "",
-    "TeamB": "",
-    "MatchDate": ""
+    "TeamA": "Portugal",
+    "Score": "3:2",
+    "TeamB": "Ghana",
+    "MatchDate": "24.11.22"
   },
   {
     "id": 3,
-    "TeamA": "",
-    "Score": "",
-    "TeamB": "",
-    "MatchDate": ""
+    "TeamA": "Korea Republic",
+    "Score": "2:3",
+    "TeamB": "Ghana",
+    "MatchDate": "28.11.22"
   },
   {
     "id": 4,
-    "TeamA": "",
-    "Score": "",
-    "TeamB": "",
-    "MatchDate": ""
+    "TeamA": "Portugal",
+    "Score": "2:0",
+    "TeamB": "Uruguay",
+    "MatchDate": "28.11.22"
   },
   {
     "id": 5,
-    "TeamA": "",
-    "Score": "",
-    "TeamB": "",
-    "MatchDate": ""
+    "TeamA": "Ghana",
+    "Score": "-:-",
+    "TeamB": "Uruguay",
+    "MatchDate": "02.12.22"
   },
   {
     "id": 6,
-    "TeamA": "",
-    "Score": "",
-    "TeamB": "",
-    "MatchDate": ""
+    "TeamA": "Korea Republic",
+    "Score": "-:-",
+    "TeamB": "Portugal",
+    "MatchDate": "02.12.22"
   }
 ]

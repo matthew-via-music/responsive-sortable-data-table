@@ -1,44 +1,44 @@
 [
   {
     "id": 1,
-    "TeamA": "",
-    "Score": "",
-    "TeamB": "",
-    "MatchDate": ""
+    "TeamA": "Argentina",
+    "Score": "1:2",
+    "TeamB": "Saudi Arabia",
+    "MatchDate": "22.11.22"
   },
   {
     "id": 2,
-    "TeamA": "",
-    "Score": "",
-    "TeamB": "",
-    "MatchDate": ""
+    "TeamA": "Mexico",
+    "Score": "0:0",
+    "TeamB": "Poland",
+    "MatchDate": "22.11.22"
   },
   {
     "id": 3,
-    "TeamA": "",
-    "Score": "",
-    "TeamB": "",
-    "MatchDate": ""
+    "TeamA": "Poland",
+    "Score": "2:0",
+    "TeamB": "Saudi Arabia",
+    "MatchDate": "26.11.22"
   },
   {
     "id": 4,
-    "TeamA": "",
-    "Score": "",
-    "TeamB": "",
-    "MatchDate": ""
+    "TeamA": "Argentina",
+    "Score": "2:0",
+    "TeamB": "Mexico",
+    "MatchDate": "26.11.22"
   },
   {
     "id": 5,
-    "TeamA": "",
-    "Score": "",
-    "TeamB": "",
-    "MatchDate": ""
+    "TeamA": "Poland",
+    "Score": "-:-",
+    "TeamB": "Argentina",
+    "MatchDate": "30.11.22"
   },
   {
     "id": 6,
-    "TeamA": "",
-    "Score": "",
-    "TeamB": "",
-    "MatchDate": ""
+    "TeamA": "Saudi Arabia",
+    "Score": "-:-",
+    "TeamB": "Mexico",
+    "MatchDate": "30.11.22"
   }
 ]

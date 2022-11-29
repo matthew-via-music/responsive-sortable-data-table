@@ -1,44 +1,44 @@
 [
   {
     "id": 1,
-    "TeamA": "",
-    "Score": "",
-    "TeamB": "",
-    "MatchDate": ""
+    "TeamA": "Denmark",
+    "Score": "0:0",
+    "TeamB": "Tunisia",
+    "MatchDate": "22.11.22"
   },
   {
     "id": 2,
-    "TeamA": "",
-    "Score": "",
-    "TeamB": "",
-    "MatchDate": ""
+    "TeamA": "France",
+    "Score": "4:1",
+    "TeamB": "Australia",
+    "MatchDate": "22.11.22"
   },
   {
     "id": 3,
-    "TeamA": "",
-    "Score": "",
-    "TeamB": "",
-    "MatchDate": ""
+    "TeamA": "Tunisia",
+    "Score": "0:1",
+    "TeamB": "Australia",
+    "MatchDate": "26.11.22"
   },
   {
     "id": 4,
-    "TeamA": "",
-    "Score": "",
-    "TeamB": "",
-    "MatchDate": ""
+    "TeamA": "France",
+    "Score": "2:1",
+    "TeamB": "Denmark",
+    "MatchDate": "26.11.22"
   },
   {
     "id": 5,
-    "TeamA": "",
-    "Score": "",
-    "TeamB": "",
-    "MatchDate": ""
+    "TeamA": "Australia",
+    "Score": "-:-",
+    "TeamB": "Denmark",
+    "MatchDate": "30.11.22"
   },
   {
     "id": 6,
-    "TeamA": "",
-    "Score": "",
-    "TeamB": "",
-    "MatchDate": ""
+    "TeamA": "Tunisia",
+    "Score": "-:-",
+    "TeamB": "France",
+    "MatchDate": "30.11.22"
   }
 ]

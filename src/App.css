@@ -10,7 +10,7 @@
   --tableBodyTextCol: #121211;
   --tableBodyBorderCol: #EEE9ED;
   --tableBodyPadding: 20px;
-  --tableMatchesBodyPadding: 28px;
+  --tableMatchesBodyPadding: 26px;
   --tableBodyTextSize: 24px;
   
   --countryRowStatsTextSize: 22px;
@@ -262,17 +262,31 @@ table.matches td{
   }
 }
 @media (max-width: 288px){
-  h1{
+  h1, h2{
     font-size: 1rem;   
   }
   button{
     font-size: .8em!important;
   }
-  .score{
+  table.matches .score{
     font-size: 12px;
   }
 }
-
+@media (max-width: 235px){
+  :root{
+    --countryRowStatsTextSize: 14px;
+    --countryRowMatchesTextSize: 12px;
+  }
+  .collapse{
+    display: block;
+    width: 98%;
+    margin: 0 auto;
+  } 
+  .collapse button{
+    width: 100%;
+    margin: 3px 0;
+  }
+}
 @media (max-width: 2337px){
   #superScreenBtn{
     display: none;
