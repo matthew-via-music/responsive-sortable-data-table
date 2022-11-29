@@ -15,9 +15,9 @@ function Matches(props: Props) {
         <thead>
         <tr>
           <td className="hideOnMobile blank"></td>
-          <td className="hideOnMobile">Score</td>
+          <td className="hideOnTablet">Score</td>
           <td className="hideOnMobile blank"></td>
-          <td className="hideOnMobile">Match Date</td>
+          <td className="hideOnTablet">Match Date</td>
         </tr>
         </thead>
 
@@ -26,7 +26,7 @@ function Matches(props: Props) {
           <td className="teamA countryRowMatches">{TeamA}</td>
           <td className="score">{Score}</td>
           <td className="teamB countryRowMatches">{TeamB}</td>
-          <td className="hideOnMobile">{MatchDate}</td>
+          <td className="hideOnTablet">{MatchDate}</td>
         </tr>
       </tbody>
       </table>

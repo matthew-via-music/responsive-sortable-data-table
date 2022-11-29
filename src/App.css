@@ -4,12 +4,13 @@
   --tableHeadBorderCol: #333;
   --tableHeadPadding: 4px;
   --tableHeadTextSize: 14px;
-  
+/* ^^^^ large screens only see media queries */
+
   /* --tableBodyBg: #F7f7f7; */
   --tableBodyTextCol: #121211;
   --tableBodyBorderCol: #EEE9ED;
   --tableBodyPadding: 20px;
-  --tableMatchesBodyPadding: 18px;
+  --tableMatchesBodyPadding: 28px;
   --tableBodyTextSize: 24px;
   
   --countryRowStatsTextSize: 22px;
@@ -18,12 +19,14 @@
   --borderSize: 1px;
   --tableMarginBottom: 10px;
 
-  --showBtnBg: #62c3a1;
-  --showBtnHoverBg: #339975;
+  --showBtnBg: #456de6;
+  --showBtnHoverBg: #456de699;
   --showBtnTextCol: #f1f1f1;
-  --hideBtnBg: #f76957;
-  --hideBtnHoverBg: #f8804d;
+  --hideBtnBg: #e74645;
+  --hideBtnHoverBg: #e7464599;
   --hideBtnTextCol: #f1f1f1;
+
+  --scoreBg: #30a130;
 }
 
 .container{
@@ -94,7 +97,16 @@ table thead {
 }
 /* control the flag size */
 table:not(table.matches) > thead > tr > td{
-  height: 75px;
+  height: 105px;
+}
+.flag{
+  background-color: transparent;
+  border: 0px;
+  /* background-image: url(->dynamically inserted via react prop<-); */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  /* background-size: 100% 100%; */
 }
 thead > tr > td{
   padding: var(--tableHeadPadding);
@@ -115,18 +127,12 @@ table.matches > tbody > tr > td{
 .countryRowMatches{
   font-size: var(--countryRowMatchesTextSize);
 }
-.flag{
-  background-color: transparent;
-  border: 0px;
-  /* background-image: url(->dynamically inserted via react prop<-); */
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: 100% 100%;
-}
-.score{
-  background-color: var(--showBtnHoverBg);
+
+table.matches .score{
+  background-color: var(--scoreBg);
   color: white;
   letter-spacing: 4px;
+  font-size: 28px;
 }
 table.matches td{
   width: 25%;
@@ -157,11 +163,21 @@ table.matches td{
   }
 }
 @media (max-width: 767px){
+  :root{
+    --tableBodyTextSize: 18px;
+    --countryRowStatsTextSize: 18px;
+    --countryRowMatchesTextSize: 18px;
+    --tableBodyPadding: 10px;
+    --tableMatchesBodyPadding: 10px;
+  }
   .container{
     display: block;
   }
-  .hideOnMobile{
+  .hideOnTablet{
     display: none;
+ }
+ table.tabletStatsUi > thead > tr > td{
+  font-size: 40px;
  }
  /* control the flag size */
   /* table > thead > tr > td{
@@ -172,18 +188,22 @@ table.matches td{
  }
   table.matches .score{
     width: 20%;
+    font-size: 28px;
  }
-  table.matches td{
-    width: 40%;
+  table.matches .teamA{
+    min-width: 30%;
   }
 }
-@media (max-width: 460px){
+@media (max-width: 520px){
   :root{
-    --tableBodyTextSize: 18px;
-    --countryRowStatsTextSize: 16px;
-    --countryRowMatchesTextSize: 16px;
+    /* --tableBodyTextSize: 18px; */
+    /* --countryRowStatsTextSize: 16px; */
+    /* --countryRowMatchesTextSize: 16px; */
     --tableBodyPadding: 10px;
     --tableMatchesBodyPadding: 10px;
+  }
+  .hideOnMobile{
+    display: none;
   }
   table.matches{
     width: 100%;
@@ -193,13 +213,58 @@ table.matches td{
   table.matches .teamA{
     min-width: 40%;
   }
-  /* table.matches .score{
-    min-width: 0%;
+  table.matches .score{
+    min-width: 10%;
+    font-size: 20px;
   }
   table.matches .teamB{
-    min-width: 0%;
-  } */
+    min-width: 40%;
+  }
 }
+@media (max-width: 380px){
+  :root{
+    --tableBodyTextSize: 14px;
+    /* --countryRowStatsTextSize: 16px; */
+    --countryRowMatchesTextSize: 16px;
+    --tableBodyPadding: 10px;
+  }
+  table.tabletStatsUi > thead > tr > td{
+    font-size: 40px;
+ }
+}
+@media (max-width: 340px){
+  :root{
+    --tableBodyPadding: 5px;
+  }
+  table.tabletStatsUi > thead > tr > td{
+    font-size: 30px;
+ }
+}
+@media (max-width: 310px){
+  :root{
+    --tableBodyPadding: 1px;
+    --countryRowStatsTextSize: 16px;
+    --countryRowMatchesTextSize: 14px;
+  }
+  table.matches .score{
+    font-size: 18px;
+  }
+  .hideOnTiny{
+    display: none;
+  }
+}
+@media (max-width: 288px){
+  h1{
+    font-size: 1rem;   
+  }
+  button{
+    font-size: .8em!important;
+  }
+  .score{
+    font-size: 12px;
+  }
+}
+
 @media (max-width: 2337px){
   #superScreenBtn{
     display: none;

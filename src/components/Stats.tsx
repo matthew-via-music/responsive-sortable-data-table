@@ -1,3 +1,5 @@
+import { useEffect, useState } from "react"
+
 interface Props {
   Flag?: string,
   Country?: string,
@@ -13,9 +15,45 @@ interface Props {
 }
 
 function Stats(props: Props) {
+  const [largeScreen, setLargeScreen] = useState(
+    window.matchMedia("(min-width: 768px)").matches
+  )
+
   const {Flag, Country, Played, Win, Draw, Lose, Points, GoalsFor, GoalsAgainst, GoalDifference, AdvanceToNextRound} = props
+
+  useEffect(() => {
+    window
+    .matchMedia("(min-width: 768px)")
+    .addEventListener('change', e => setLargeScreen( e.matches ))
+  },[])
+
   return (
     <>
+{ !largeScreen ? (
+      <table className="tabletStatsUi">
+        <thead>
+        <tr>
+          <td style={{backgroundImage: `url(${Flag})`}} className="flag">{/* Country Flag */}</td>
+          <td className="hideOnMobile">{Played}</td>
+          <td className="hideOnTiny">{Win}</td>
+          <td className="hideOnTiny">{Draw}</td>
+          <td className="hideOnMobile">{Lose}</td>
+          <td>{Points}</td>
+        </tr>
+        </thead>      
+
+        <tbody>
+        <tr>
+          <td className="countryRowStats">{Country}</td>
+          <td className="hideOnMobile">Played</td>
+          <td className="hideOnTiny">Win</td>
+          <td className="hideOnTiny">Draw</td>
+          <td className="hideOnMobile">Lose</td>
+          <td>Points</td>
+        </tr>
+        </tbody>
+      </table>
+  ) : 
       <table>
         <thead>
         <tr>
@@ -25,14 +63,13 @@ function Stats(props: Props) {
           <td>Draw</td>
           <td className="hideOnMobile">Lose</td>
           <td>Points</td>
-          <td className="hideOnMobile">Goals For</td>
-          <td className="hideOnMobile">Goals Against</td>
-          <td className="hideOnMobile">Goal Difference</td>
-          <td className="hideOnMobile">Advance To Next Round</td>
+          <td className="hideOnTablet">Goals For</td>
+          <td className="hideOnTablet">Goals Against</td>
+          <td className="hideOnTablet">Goal Difference</td>
+          <td className="hideOnTablet">Advance To Next Round</td>
         </tr>
         </thead>      
-{/*  */}
-{/*  */}
+
         <tbody>
         <tr>
           <td className="countryRowStats">{Country}</td>
@@ -41,13 +78,14 @@ function Stats(props: Props) {
           <td>{Draw}</td>
           <td className="hideOnMobile">{Lose}</td>
           <td>{Points}</td>
-          <td className="hideOnMobile">{GoalsFor}</td>
-          <td className="hideOnMobile">{GoalsAgainst}</td>
-          <td className="hideOnMobile">{GoalDifference}</td>
-          <td className="hideOnMobile">{AdvanceToNextRound}</td>
+          <td className="hideOnTablet">{GoalsFor}</td>
+          <td className="hideOnTablet">{GoalsAgainst}</td>
+          <td className="hideOnTablet">{GoalDifference}</td>
+          <td className="hideOnTablet">{AdvanceToNextRound}</td>
         </tr>
       </tbody>
       </table>
+  }
     </>
   )
 }
