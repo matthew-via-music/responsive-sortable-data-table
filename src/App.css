@@ -63,6 +63,9 @@ h1{
   background: var(--hideBtnHoverBg);
   color: var(--showBtnTextCol); 
 }
+#superScreenBtn{
+  display: block;
+}
 /*  */
 /*  */
 
@@ -176,4 +179,9 @@ table.matches td{
   table.matches .teamB{
     min-width: 0%;
   } */
+}
+@media (max-width: 2336px){
+  #superScreenBtn{
+    display: none;
+  }
 }

@@ -1,0 +1,54 @@
+[
+  {
+    "id": 1,
+    "Country": "",
+    "Played": 0,
+    "Win": 0,
+    "Draw": 0,
+    "Lose": 0,
+    "Points": 0,
+    "GoalsFor": 0,
+    "GoalsAgainst": 0,
+    "GoalDifference": 0,
+    "AdvanceToNextRound": "-"
+  },
+  {
+    "id": 2,
+    "Country": "",
+    "Played": 0,
+    "Win": 0,
+    "Draw": 0,
+    "Lose": 0,
+    "Points": 0,
+    "GoalsFor": 0,
+    "GoalsAgainst": 0,
+    "GoalDifference": 0,
+    "AdvanceToNextRound": "-"
+  },
+  {
+    "id": 3,
+    "Country": "",
+    "Played": 0,
+    "Win": 0,
+    "Draw": 0,
+    "Lose": 0,
+    "Points": 0,
+    "GoalsFor": 0,
+    "GoalsAgainst": 0,
+    "GoalDifference": 0,
+    "AdvanceToNextRound": "-"
+  },
+  {
+    "id": 4,
+    "Country": "",
+    "Played": 0,
+    "Win": 0,
+    "Draw": 0,
+    "Lose": 0,
+    "Points": 0,
+    "GoalsFor": 0,
+    "GoalsAgainst": 0,
+    "GoalDifference": 0,
+    "AdvanceToNextRound": "-"
+  }
+]
