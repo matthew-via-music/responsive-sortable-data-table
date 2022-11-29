@@ -123,7 +123,7 @@ table.matches td{
 
 
 /*  */
-@media (max-width: 2336px){
+@media (max-width: 2337px){
   .container{
     max-width: 1564px;
   }
@@ -180,7 +180,7 @@ table.matches td{
     min-width: 0%;
   } */
 }
-@media (max-width: 2336px){
+@media (max-width: 2337px){
   #superScreenBtn{
     display: none;
   }
