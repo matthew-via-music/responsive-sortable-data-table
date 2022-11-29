@@ -41,9 +41,13 @@ function App() {
   // 
   
   useEffect(() => {
-    let el:any = document.querySelector('.wrapper');
-    el.classList.add('fade-in');
-    el.classList.remove('splash');
+    
+    let el2:any = document.querySelector('.splashBg');
+    el2.classList.add('splash');
+    setTimeout(() => {
+      let el:any = document.querySelector('.wrapper');
+      el.classList.add('fade-in');
+    }, 700);
 
     window
     .matchMedia("(min-width: 2336px)")
@@ -52,7 +56,7 @@ function App() {
 
   return (
     <>
-
+<div className="splashBg"></div>
 <div className="wrapper">
  
      <h1>World Cup 2022</h1>

@@ -185,10 +185,30 @@ table.matches td{
     display: none;
   }
 }
-
+/* Load animations */
+.splashBg{
+  opacity: 1;
+  background-image: url(./assets/worldcup_trans_offset_top.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 90vh;
+  background-attachment: fixed;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  transition: 1.1s opacity cubic-bezier(1,.5,.7,1);
+}
+.splash{
+  opacity: 0;
+  z-index: -1;
+}
+/* Load Content */
 .wrapper {
   opacity: 0;
-  transition: 4s opacity;
+  transition: .9s opacity ease-in-out;
 }
 .fade-in {
   opacity: 1;

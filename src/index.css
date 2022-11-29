@@ -5,12 +5,14 @@
 	box-sizing: border-box; 
 }
 html, body{
+  height: 100%; /* to correctly size world cup background image splash screen image */
   overflow-x: hidden;
   position: relative;
 }
 body{
   /* overflow-y: scroll; */
   font-family: sans-serif;
+  background-color: #FEFEFE;
 }
 a {
   font-weight: 500;
