@@ -185,3 +185,11 @@ table.matches td{
     display: none;
   }
 }
+
+.wrapper {
+  opacity: 0;
+  transition: 4s opacity;
+}
+.fade-in {
+  opacity: 1;
+}

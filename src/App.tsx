@@ -41,6 +41,10 @@ function App() {
   // 
   
   useEffect(() => {
+    let el:any = document.querySelector('.wrapper');
+    el.classList.add('fade-in');
+    el.classList.remove('splash');
+
     window
     .matchMedia("(min-width: 2336px)")
     .addEventListener('change', e => setSuperScreenView( e.matches ))
@@ -48,6 +52,9 @@ function App() {
 
   return (
     <>
+
+<div className="wrapper">
+ 
      <h1>World Cup 2022</h1>
 
      <Buttons 
@@ -132,6 +139,8 @@ function App() {
       }
       {/* \container */}
       </div>
+{/* \wrapper */}
+</div>
     </>
   )
 }
