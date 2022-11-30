@@ -7,7 +7,11 @@ npm install
 npm run dev
 ```
 
-`vite build`
+`add the following to vite.config.ts before build`
+
+` base: './' `
+
+`npm run build`
 
 
 (Deploy Info)[https://vitejs.dev/guide/static-deploy.html]
