@@ -26,7 +26,7 @@ import GroupHMatchesData from "./data/groupHMatches.json"
 function App() {
   
   const [superScreenView, setSuperScreenView] = useState(
-    window.matchMedia("(min-width: 2337px)").matches && true
+    window.matchMedia("(min-width: 2338px)").matches && true
   )
   const [toggleGroups, setToggleGroups] = useState(false)
   const [toggleMatches, setToggleMatches] = useState(false)
@@ -50,7 +50,7 @@ function App() {
     }, 700);
 
     window
-    .matchMedia("(min-width: 2337px)")
+    .matchMedia("(min-width: 2338px)")
     .addEventListener('change', e => setSuperScreenView( e.matches ))
   }, [])
 

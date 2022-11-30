@@ -45,6 +45,17 @@ h1{
 }
 /*  */
 /*  */
+.collapse {
+    display: flex;
+    width: 100%;
+}
+.collapse button{
+    width: 50%;
+    margin-left: 0%;
+    margin-right: 0%;
+}
+/*  */
+/*  */
 .toggleHideGroups{
   display: none;
 }
@@ -148,6 +159,11 @@ table.matches td{
   .container{
     max-width: 1564px;
   }
+  #matchesBtn {
+    width: 50%!important;
+    margin-left: 0%!important;
+    margin-right: 2%!important;
+  }
 }
 @media (max-width: 1585px){
   .container{
@@ -156,8 +172,11 @@ table.matches td{
   .collapse{
     display: flex;
   }
+  #matchesBtn{
+    display: none;
+  }
   button{
-    width: 48%;
+    width: 100%!important;
     margin-left: 1%;
     margin-right: 1%;
   }
@@ -172,6 +191,11 @@ table.matches td{
   }
   .container{
     display: block;
+  }
+  button{
+    width: 98%!important;
+    margin-left: 1%!important;
+    margin-right: 1%!important;
   }
   .hideOnTablet{
     display: none;
@@ -292,6 +316,13 @@ table.matches td{
     display: none;
   }
 }
+@media (min-width: 2338px){
+  #matchesBtn{
+    display: none;
+  }
+}
+
+
 /* Load animations */
 .splashBg{
   opacity: 1;
