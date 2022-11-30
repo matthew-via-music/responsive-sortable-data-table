@@ -177,8 +177,13 @@ table.matches td{
   } */
   button{
     /* width: 100%!important; */
-    /* width: 50%!important; */
-    margin-left: 1%!important;
+    width: 50%!important;
+    /* margin-left: 1%!important; */
+  }
+  #matchesBtn {
+    /* width: 50%!important;
+    margin-left: 0%!important; */
+    margin-right: 0%!important;
   }
 }
 @media (max-width: 767px){
@@ -198,6 +203,9 @@ table.matches td{
   button{
     width: 50%!important;
     margin-left: 10px!important;
+    /* margin-right: 10px!important; */
+  }
+  #matchesBtn {
     margin-right: 10px!important;
   }
   .hideOnTablet{
