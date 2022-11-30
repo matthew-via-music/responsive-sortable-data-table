@@ -25,18 +25,19 @@ import GroupHMatchesData from "./data/groupHMatches.json"
 
 function App() {
   
-  const [superScreenView, setSuperScreenView] = useState(
+  const [pivotScreenView, setPivotScreenView] = useState(
     window.matchMedia("(min-width: 2338px)").matches && true
   )
+  const [disableBtn, setDisableBtn] = useState(false)
   const [toggleGroups, setToggleGroups] = useState(false)
   const [toggleMatches, setToggleMatches] = useState(false)
   
   // 
-  const [toggleSuperScreen, setToggleSuperScreen] = useState(false)
+  const [togglePivotScreen, setPivotSuperScreen] = useState(false)
 
   function toggleSuperScreenFn(){
-    setToggleSuperScreen((x: any) => !x)
-    setSuperScreenView((x: any) => !x)
+    setPivotSuperScreen((x: any) => !x)
+    setPivotScreenView((x: any) => !x)
   }
   // 
   
@@ -51,7 +52,7 @@ function App() {
 
     window
     .matchMedia("(min-width: 2338px)")
-    .addEventListener('change', e => setSuperScreenView( e.matches ))
+    .addEventListener('change', e => setPivotScreenView( e.matches ))
   }, [])
 
   return (
@@ -63,12 +64,13 @@ function App() {
 
      <Buttons 
       toggleGroups={toggleGroups} setToggleGroups={setToggleGroups} 
+      disableBtn={disableBtn} setDisableBtn={setDisableBtn}
       toggleMatches={toggleMatches} setToggleMatches={setToggleMatches} 
-      toggleSuperScreen={toggleSuperScreen} toggleSuperScreenFn={toggleSuperScreenFn} 
+      togglePivotScreen={togglePivotScreen} togglePivotScreenFn={toggleSuperScreenFn} 
       />
 
      <div className="container">
-      {superScreenView && 
+      {pivotScreenView && 
         <>
           <div className={`${toggleGroups ? "toggleHideGroups" : ""}`}><GroupStats Group="A" 
           GroupStatsData={GroupAStatsData}/></div>
@@ -105,7 +107,7 @@ function App() {
           GroupMatchesData={GroupHMatchesData} /></div>
         </>
       }
-      {!superScreenView && 
+      {!pivotScreenView && 
         <>
           <div className={`${toggleGroups ? "toggleHideGroups" : ""}`}><GroupStats Group="A" 
           GroupStatsData={GroupAStatsData}/></div>
