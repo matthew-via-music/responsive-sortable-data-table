@@ -28,15 +28,17 @@ function App() {
   const [pivotScreenView, setPivotScreenView] = useState(
     window.matchMedia("(min-width: 2338px)").matches && true
   )
-  const [disableBtn, setDisableBtn] = useState(false)
+  const [disableMatchBtn, setDisableMatchBtn] = useState(false)
+  const [disableGroupBtn, setDisableGroupBtn] = useState(false)
   const [toggleGroups, setToggleGroups] = useState(false)
   const [toggleMatches, setToggleMatches] = useState(false)
-  
   // 
-  const [togglePivotScreen, setPivotSuperScreen] = useState(false)
+  const [togglePivotScreen, setTogglePivotScreen] = useState(false)
+  const [uses__disableMatchBtn, setDisablePivotBtn] = useState(false)
 
   function toggleSuperScreenFn(){
-    setPivotSuperScreen((x: any) => !x)
+    setTogglePivotScreen((x: any) => !x)
+    setDisablePivotBtn((x: any) => !x)
     setPivotScreenView((x: any) => !x)
   }
   // 
@@ -64,9 +66,11 @@ function App() {
 
      <Buttons 
       toggleGroups={toggleGroups} setToggleGroups={setToggleGroups} 
-      disableBtn={disableBtn} setDisableBtn={setDisableBtn}
+      disableMatchBtn={disableMatchBtn} setDisableMatchBtn={setDisableMatchBtn}
       toggleMatches={toggleMatches} setToggleMatches={setToggleMatches} 
+      disableGroupBtn={disableGroupBtn} setDisableGroupBtn={setDisableGroupBtn}
       togglePivotScreen={togglePivotScreen} togglePivotScreenFn={toggleSuperScreenFn} 
+      setDisablePivotBtn={setDisablePivotBtn}
       />
 
      <div className="container">

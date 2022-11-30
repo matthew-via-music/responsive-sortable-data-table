@@ -177,9 +177,8 @@ table.matches td{
   } */
   button{
     /* width: 100%!important; */
-    width: 50%!important;
-    margin-left: 1%;
-    margin-right: 1%;
+    /* width: 50%!important; */
+    margin-left: 1%!important;
   }
 }
 @media (max-width: 767px){
