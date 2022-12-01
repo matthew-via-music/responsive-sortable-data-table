@@ -1,27 +1,10 @@
 import { useState, useEffect } from 'react';
 import './App.css'
 
+import {GroupStatsDataA, GroupStatsDataB, GroupStatsDataC, GroupStatsDataD, GroupStatsDataE, GroupStatsDataF, GroupStatsDataG, GroupStatsDataH, GroupMatchesDataA, GroupMatchesDataB, GroupMatchesDataC, GroupMatchesDataD, GroupMatchesDataE, GroupMatchesDataF, GroupMatchesDataG, GroupMatchesDataH } from "./data/Data"
 import GroupStats from './components/GroupStats'
 import GroupMatches from './components/GroupMatches'
 import Buttons from './components/Buttons'
-
-import GroupAStatsData from "./data/groupAStats.json"
-import GroupBStatsData from "./data/groupBStats.json"
-import GroupCStatsData from "./data/groupCStats.json"
-import GroupDStatsData from "./data/groupDStats.json"
-import GroupEStatsData from "./data/groupEStats.json"
-import GroupFStatsData from "./data/groupFStats.json"
-import GroupGStatsData from "./data/groupGStats.json"
-import GroupHStatsData from "./data/groupHStats.json"
-
-import GroupAMatchesData from "./data/groupAMatches.json"
-import GroupBMatchesData from "./data/groupBMatches.json"
-import GroupCMatchesData from "./data/groupCMatches.json"
-import GroupDMatchesData from "./data/groupDMatches.json"
-import GroupEMatchesData from "./data/groupEMatches.json"
-import GroupFMatchesData from "./data/groupFMatches.json"
-import GroupGMatchesData from "./data/groupGMatches.json"
-import GroupHMatchesData from "./data/groupHMatches.json"
 
 function App() {
   
@@ -95,74 +78,74 @@ function App() {
       {pivotScreenView && 
         <>
           <div className={`${toggleGroups ? "toggleHideGroups" : ""}`}><GroupStats Group="A" 
-          GroupStatsData={GroupAStatsData}/></div>
+          GroupStatsData={GroupStatsDataA}/></div>
           <div className={`${toggleGroups ? "toggleHideGroups" : ""}`}><GroupStats Group="B" 
-          GroupStatsData={GroupBStatsData}/></div>
+          GroupStatsData={GroupStatsDataB}/></div>
           <div className={`${toggleGroups ? "toggleHideGroups" : ""}`}><GroupStats Group="C" 
-          GroupStatsData={GroupCStatsData}/></div>
+          GroupStatsData={GroupStatsDataC}/></div>
           <div className={`${toggleGroups ? "toggleHideGroups" : ""}`}><GroupStats Group="D" 
-          GroupStatsData={GroupDStatsData}/></div>
+          GroupStatsData={GroupStatsDataD}/></div>
           <div className={`${toggleGroups ? "toggleHideGroups" : ""}`}><GroupStats Group="E" 
-          GroupStatsData={GroupEStatsData}/></div>
+          GroupStatsData={GroupStatsDataE}/></div>
           <div className={`${toggleGroups ? "toggleHideGroups" : ""}`}><GroupStats Group="F" 
-          GroupStatsData={GroupFStatsData}/></div>
+          GroupStatsData={GroupStatsDataF}/></div>
           <div className={`${toggleGroups ? "toggleHideGroups" : ""}`}><GroupStats Group="G" 
-          GroupStatsData={GroupGStatsData}/></div>
+          GroupStatsData={GroupStatsDataG}/></div>
           <div className={`${toggleGroups ? "toggleHideGroups" : ""}`}><GroupStats Group="H" 
-          GroupStatsData={GroupHStatsData}/></div>
+          GroupStatsData={GroupStatsDataH}/></div>
 
           <div className={`${toggleMatches ? "toggleHideMatches" : ""}`}><GroupMatches Group="A" 
-          GroupMatchesData={GroupAMatchesData} /></div>
+          GroupMatchesData={GroupMatchesDataA} /></div>
           <div className={`${toggleMatches ? "toggleHideMatches" : ""}`}><GroupMatches Group="B" 
-          GroupMatchesData={GroupBMatchesData} /></div>
+          GroupMatchesData={GroupMatchesDataB} /></div>
           <div className={`${toggleMatches ? "toggleHideMatches" : ""}`}><GroupMatches Group="C" 
-          GroupMatchesData={GroupCMatchesData} /></div>
+          GroupMatchesData={GroupMatchesDataC} /></div>
           <div className={`${toggleMatches ? "toggleHideMatches" : ""}`}><GroupMatches Group="D" 
-          GroupMatchesData={GroupDMatchesData} /></div>
+          GroupMatchesData={GroupMatchesDataD} /></div>
           <div className={`${toggleMatches ? "toggleHideMatches" : ""}`}><GroupMatches Group="E" 
-          GroupMatchesData={GroupEMatchesData} /></div>
+          GroupMatchesData={GroupMatchesDataE} /></div>
           <div className={`${toggleMatches ? "toggleHideMatches" : ""}`}><GroupMatches Group="F" 
-          GroupMatchesData={GroupFMatchesData} /></div>
+          GroupMatchesData={GroupMatchesDataF} /></div>
           <div className={`${toggleMatches ? "toggleHideMatches" : ""}`}><GroupMatches Group="G" 
-          GroupMatchesData={GroupGMatchesData} /></div>
+          GroupMatchesData={GroupMatchesDataG} /></div>
           <div className={`${toggleMatches ? "toggleHideMatches" : ""}`}><GroupMatches Group="H" 
-          GroupMatchesData={GroupHMatchesData} /></div>
+          GroupMatchesData={GroupMatchesDataH} /></div>
         </>
       }
       {!pivotScreenView && 
         <>
           <div className={`${toggleGroups ? "toggleHideGroups" : ""}`}><GroupStats Group="A" 
-          GroupStatsData={GroupAStatsData}/></div>
+          GroupStatsData={GroupStatsDataA}/></div>
           <div className={`${toggleMatches ? "toggleHideMatches" : ""}`}><GroupMatches Group="A" 
-          GroupMatchesData={GroupAMatchesData} /></div>
+          GroupMatchesData={GroupMatchesDataA} /></div>
           <div className={`${toggleGroups ? "toggleHideGroups" : ""}`}><GroupStats Group="B" 
-          GroupStatsData={GroupBStatsData} /></div>
+          GroupStatsData={GroupStatsDataB} /></div>
           <div className={`${toggleMatches ? "toggleHideMatches" : ""}`}><GroupMatches Group="B" 
-          GroupMatchesData={GroupBMatchesData} /></div>
+          GroupMatchesData={GroupMatchesDataB} /></div>
           <div className={`${toggleGroups ? "toggleHideGroups" : ""}`}><GroupStats Group="C" 
-          GroupStatsData={GroupCStatsData} /></div>
+          GroupStatsData={GroupStatsDataC} /></div>
           <div className={`${toggleMatches ? "toggleHideMatches" : ""}`}><GroupMatches Group="C" 
-          GroupMatchesData={GroupCMatchesData} /></div>
+          GroupMatchesData={GroupMatchesDataC} /></div>
           <div className={`${toggleGroups ? "toggleHideGroups" : ""}`}><GroupStats Group="D" 
-          GroupStatsData={GroupDStatsData} /></div>
+          GroupStatsData={GroupStatsDataD} /></div>
           <div className={`${toggleMatches ? "toggleHideMatches" : ""}`}><GroupMatches Group="D" 
-          GroupMatchesData={GroupDMatchesData} /></div>
+          GroupMatchesData={GroupMatchesDataD} /></div>
           <div className={`${toggleGroups ? "toggleHideGroups" : ""}`}><GroupStats Group="E" 
-          GroupStatsData={GroupEStatsData} /></div>
+          GroupStatsData={GroupStatsDataE} /></div>
           <div className={`${toggleMatches ? "toggleHideMatches" : ""}`}><GroupMatches Group="E" 
-          GroupMatchesData={GroupEMatchesData} /></div>
+          GroupMatchesData={GroupMatchesDataE} /></div>
           <div className={`${toggleGroups ? "toggleHideGroups" : ""}`}><GroupStats Group="F" 
-          GroupStatsData={GroupFStatsData} /></div>
+          GroupStatsData={GroupStatsDataF} /></div>
           <div className={`${toggleMatches ? "toggleHideMatches" : ""}`}><GroupMatches Group="F" 
-          GroupMatchesData={GroupFMatchesData} /></div>
+          GroupMatchesData={GroupMatchesDataF} /></div>
           <div className={`${toggleGroups ? "toggleHideGroups" : ""}`}><GroupStats Group="G" 
-          GroupStatsData={GroupGStatsData} /></div>
+          GroupStatsData={GroupStatsDataG} /></div>
           <div className={`${toggleMatches ? "toggleHideMatches" : ""}`}><GroupMatches Group="G" 
-          GroupMatchesData={GroupGMatchesData} /></div>
+          GroupMatchesData={GroupMatchesDataG} /></div>
           <div className={`${toggleGroups ? "toggleHideGroups" : ""}`}><GroupStats Group="H" 
-          GroupStatsData={GroupHStatsData} /></div>
+          GroupStatsData={GroupStatsDataH} /></div>
           <div className={`${toggleMatches ? "toggleHideMatches" : ""}`}><GroupMatches Group="H" 
-          GroupMatchesData={GroupHMatchesData} /></div>
+          GroupMatchesData={GroupMatchesDataH} /></div>
         </>
       }
       {/* \container */}
