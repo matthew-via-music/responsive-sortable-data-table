@@ -16,6 +16,7 @@ function App(props: Props) {
       <Routes>
         <Route path="/" element={<Page1 />} />
         <Route path="/page2" element={<Page2 />} />
+        <Route path="*" element={<Page1 />} />
       </Routes>
     </BrowserRouter>
     </>
