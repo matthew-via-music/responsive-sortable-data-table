@@ -34,22 +34,22 @@ function Stats(props: Props) {
         <thead>
         <tr>
           <td style={{backgroundImage: `url(${Flag})`}} className="flag">{/* Country Flag */}</td>
-          <td className="hideOnMobile">{Played}</td>
+          <td>{Points}</td>
           <td className="hideOnTiny">{Win}</td>
           <td className="hideOnTiny">{Draw}</td>
           <td className="hideOnMobile">{Lose}</td>
-          <td>{Points}</td>
+          <td className="hideOnMobile">{Played}</td>
         </tr>
         </thead>      
 
         <tbody>
         <tr>
           <td className="countryRowStats">{Country}</td>
-          <td className="hideOnMobile">Played</td>
+          <td>Points</td>
           <td className="hideOnTiny">Win</td>
           <td className="hideOnTiny">Draw</td>
           <td className="hideOnMobile">Lose</td>
-          <td>Points</td>
+          <td className="hideOnMobile">Played</td>
         </tr>
         </tbody>
       </table>
@@ -58,30 +58,30 @@ function Stats(props: Props) {
         <thead>
         <tr>
           <td style={{backgroundImage: `url(${Flag})`}} className="flag">{/* Country Flag */}</td>
-          <td className="hideOnMobile">Played</td>
+          <td>Points</td>
           <td>Win</td>
           <td>Draw</td>
           <td className="hideOnMobile">Lose</td>
-          <td>Points</td>
           <td className="hideOnTablet">Goals For</td>
           <td className="hideOnTablet">Goals Against</td>
           <td className="hideOnTablet">Goal Difference</td>
           <td className="hideOnTablet">Advance To Next Round</td>
+          <td className="hideOnMobile">Played</td>
         </tr>
         </thead>      
 
         <tbody>
         <tr>
           <td className="countryRowStats">{Country}</td>
-          <td className="hideOnMobile">{Played}</td>
+          <td>{Points}</td>
           <td>{Win}</td>
           <td>{Draw}</td>
           <td className="hideOnMobile">{Lose}</td>
-          <td>{Points}</td>
           <td className="hideOnTablet">{GoalsFor}</td>
           <td className="hideOnTablet">{GoalsAgainst}</td>
           <td className="hideOnTablet">{GoalDifference}</td>
           <td className="hideOnTablet">{AdvanceToNextRound}</td>
+          <td className="hideOnMobile">{Played}</td>
         </tr>
       </tbody>
       </table>
