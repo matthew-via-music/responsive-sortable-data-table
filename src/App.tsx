@@ -36,26 +36,40 @@ function App() {
   const [togglePivotScreen, setTogglePivotScreen] = useState(false)
   const [uses__disableMatchBtn, setDisablePivotBtn] = useState(false)
 
-  function toggleSuperScreenFn(){
+  function togglePivotScreenFn(){
     setTogglePivotScreen((x: any) => !x)
     setDisablePivotBtn((x: any) => !x)
     setPivotScreenView((x: any) => !x)
   }
-  // 
-  
+  //   
   useEffect(() => {
-    
+    // splash
     let el2:any = document.querySelector('.splashBg');
     el2.classList.add('splash');
     setTimeout(() => {
       let el:any = document.querySelector('.wrapper');
       el.classList.add('fade-in');
     }, 700);
-
+    // detect size and pivot screen UI layout
     window
     .matchMedia("(min-width: 2338px)")
     .addEventListener('change', e => setPivotScreenView( e.matches ))
-  }, [])
+
+    // Reset if user resizes browser on smaller screen with matches hidden
+    const handleResize = () => {
+      if(window.innerWidth > 2338){
+        setDisableGroupBtn(false)
+        setDisableMatchBtn(false)
+        setToggleGroups(false)
+        setToggleMatches(false)
+        setTogglePivotScreen(false)
+        setPivotScreenView(true)
+      }
+    }
+    window.addEventListener("resize", handleResize)
+    return () => window.removeEventListener("resize", handleResize)
+    // 
+}, [])
 
   return (
     <>
@@ -69,7 +83,7 @@ function App() {
       disableMatchBtn={disableMatchBtn} setDisableMatchBtn={setDisableMatchBtn}
       toggleMatches={toggleMatches} setToggleMatches={setToggleMatches} 
       disableGroupBtn={disableGroupBtn} setDisableGroupBtn={setDisableGroupBtn}
-      togglePivotScreen={togglePivotScreen} togglePivotScreenFn={toggleSuperScreenFn} 
+      togglePivotScreen={togglePivotScreen} togglePivotScreenFn={togglePivotScreenFn} 
       setDisablePivotBtn={setDisablePivotBtn}
       />
 
