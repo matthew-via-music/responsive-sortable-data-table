@@ -56,15 +56,19 @@ function App() {
     .addEventListener('change', e => setPivotScreenView( e.matches ))
 
     // Reset if user resizes browser on smaller screen with matches hidden
+    let timeoutId:any = null // debounce
     const handleResize = () => {
-      if(window.innerWidth > 2338){
-        setDisableGroupBtn(false)
-        setDisableMatchBtn(false)
-        setToggleGroups(false)
-        setToggleMatches(false)
-        setTogglePivotScreen(false)
-        setPivotScreenView(true)
-      }
+      clearTimeout(timeoutId)
+      setTimeout(() => {
+        if(window.innerWidth > 2338){
+          setDisableGroupBtn(false)
+          setDisableMatchBtn(false)
+          setToggleGroups(false)
+          setToggleMatches(false)
+          setTogglePivotScreen(false)
+          setPivotScreenView(true)
+        } 
+      }, 150);
     }
     window.addEventListener("resize", handleResize)
     return () => window.removeEventListener("resize", handleResize)
