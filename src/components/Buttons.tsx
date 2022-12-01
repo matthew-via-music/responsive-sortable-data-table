@@ -40,7 +40,7 @@ function Butons(props: Props) {
        <button 
           disabled={disableMatchBtn} 
           style={{backgroundColor: disableMatchBtn ? '#eee':''}} 
-          id="superScreenBtn" 
+          id="pivotScreenBtn" 
           className={togglePivotScreen ? "showBtn" : "hideBtn"} 
           onClick={() => togglePivotScreenFn()}>{togglePivotScreen ? "Reset" : "Pivot Screen"}
        </button>

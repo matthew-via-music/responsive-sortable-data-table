@@ -78,7 +78,7 @@ h1{
   background: var(--hideBtnHoverBg);
   color: var(--showBtnTextCol); 
 }
-#superScreenBtn{
+#pivotScreenBtn{
   display: block;
 }
 /*  */
@@ -332,7 +332,7 @@ table.matches td{
 }
 
 @media (max-width: 2337px){
-  #superScreenBtn{
+  #pivotScreenBtn{
     display: none;
   }
 }
