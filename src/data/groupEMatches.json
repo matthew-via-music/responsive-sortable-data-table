@@ -30,14 +30,14 @@
   {
     "id": 5,
     "TeamA": "Japan",
-    "Score": "-:-",
+    "Score": "2:1",
     "TeamB": "Spain",
     "MatchDate": "01.12.22"
   },
   {
     "id": 6,
     "TeamA": "Costa Rica",
-    "Score": "-:-",
+    "Score": "2:4",
     "TeamB": "Germany",
     "MatchDate": "01.12.22"
   }
