@@ -18,11 +18,16 @@ interface Props {
 }
 
 function GroupStats(props: Props) {
-  const {Group, GroupStatsData} = props
+  let {Group, GroupStatsData} = props
+
+  GroupStatsData = GroupStatsData.sort(function(x,y){
+    return y.Points - x.Points
+  })
+
   return (
     <>
     <h2>Group {Group}</h2>
-
+    
     {GroupStatsData && GroupStatsData.map(({ id, Flag, Country, Played, Win, Draw, Lose, Points, GoalsFor, GoalsAgainst, GoalDifference, AdvanceToNextRound }) => 
       <Stats
         key={id}
