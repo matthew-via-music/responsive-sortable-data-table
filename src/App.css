@@ -97,6 +97,9 @@ table {
   text-align: center;
   margin-bottom: var(--tableMarginBottom);
 }
+th{
+  cursor: pointer;
+}
 table td, th {
   border-width: var(--borderSize);
   border-color: var(--tableHeadBorderCol);
@@ -119,7 +122,7 @@ table:not(table.matches) > thead > tr > td{
   background-size: cover;
   /* background-size: 100% 100%; */
 }
-thead > tr > td{
+thead > tr > th, thead > tr > td{
   padding: var(--tableHeadPadding);
   font-size: var(--tableHeadTextSize);
 }

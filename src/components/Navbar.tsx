@@ -7,8 +7,8 @@ function Navbar(props: Props) {
 
   return (
     <ul>
-      <Link to="/"><a><li>Home</li></a></Link>
-      <Link to="/page2"><a><li>Page2</li></a></Link>
+      <Link to="/"><li>Groups and Matches</li></Link>
+      <Link to="/page2"><li>All Data</li></Link>
     </ul>
   )
 }
