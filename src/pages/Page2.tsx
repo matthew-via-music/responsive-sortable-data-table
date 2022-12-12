@@ -12,13 +12,14 @@ function Page2() {
   const [accentGoalsFor, setAccentGoalsFor] = useState("black")
   const [accentGoalsAgainst, setAccentGoalsAgainst] = useState("black")
   const [accentGoalDifference, setAccentGoalDifference] = useState("black")
+  const [accentAdvanceToNextRound, setAccentAdvanceToNextRound] = useState("black")
 
   const [order, setOrder] = useState("ASC")
   const [data, setData] = useState(dataR.sort((x:any,y:any) => y.Points - x.Points))
 
-  let points:any, win:any, lose:any, draw:any, goalsFor:any, goalsAgainst:any, goalDifference:any
-  let highlight = "green"
-  let lowlight = "black"
+  let points:string, win:string, lose:string, draw:string, goalsFor:string, goalsAgainst:string, goalDifference:string, advanceToNextRound:string
+  
+  let highlight = "green", lowlight = "black"
 
 const sorting = (col:any) => {
   points ? setAccentPoints(highlight) : setAccentPoints(lowlight)
@@ -28,6 +29,7 @@ const sorting = (col:any) => {
   goalsFor ? setAccentGoalsFor(highlight) : setAccentGoalsFor(lowlight)
   goalsAgainst ? setAccentGoalsAgainst(highlight) : setAccentGoalsAgainst(lowlight)
   goalDifference ? setAccentGoalDifference(highlight) : setAccentGoalDifference(lowlight)
+  advanceToNextRound ? setAccentAdvanceToNextRound(highlight) : setAccentAdvanceToNextRound(lowlight)
 
   if(order === "ASC"){
     const ASC = [...data].sort((a, b) => a[col] > b[col] ? 1 : -1)
@@ -81,13 +83,16 @@ const sorting = (col:any) => {
         onClick={(e)=> {(goalDifference = e.currentTarget.id), sorting("GoalDifference")}} 
         style={{background: accentGoalDifference, color: "white"}}><span>&darr;&uarr;&nbsp;</span>Goal Difference</th>
 
-        <th className="hideOnTablet" style={{background: "black", color: "white"}}>Advance To Next Round</th>
+        <th id="8"
+        className="hideOnTablet" 
+        onClick={(e)=> {(advanceToNextRound = e.currentTarget.id), sorting("AdvanceToNextRound")}} 
+        style={{background: accentAdvanceToNextRound, color: "white"}}><span>&darr;&uarr;&nbsp;</span>Advance Next Round</th>
 
       </tr></thead>
       <tbody>
-      {data.map(x => 
+      {data.map((x:any) => 
         <tr key={x.id}>
-          <td>{x.Country}</td>
+          <td style={{width: "50%"}}><img style={{width: 25, marginRight: 2}} src={x.Flag} alt={x.Country}/>{x.Country}</td>
           <td className="hideOnMobile">{x.Points}</td>
           <td>{x.Win}</td>
           <td>{x.Lose}</td>
