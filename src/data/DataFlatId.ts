@@ -4,7 +4,7 @@ Object.entries([GroupStatsDataA, GroupStatsDataB, GroupStatsDataC, GroupStatsDat
 
 let data = [GroupStatsDataA, GroupStatsDataB, GroupStatsDataC, GroupStatsDataD, GroupStatsDataE, GroupStatsDataF, GroupStatsDataG, GroupStatsDataH].flat()
   
-data.forEach(x => delete x.id)
+data.forEach((x:any) => delete x.id)
 data.forEach((obj, i) => obj.id = i + 1)
 
 function arraymove(arr:any, fromIndex:any, toIndex:any) {
