@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react"
 
 interface Props {
+  id?:string | number,
   Flag?: string,
   Country?: string,
   Played: number,

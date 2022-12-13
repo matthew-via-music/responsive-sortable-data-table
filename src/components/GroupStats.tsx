@@ -30,6 +30,7 @@ function GroupStats(props: Props) {
     
     {GroupStatsData && GroupStatsData.map(({ id, Flag, Country, Played, Win, Draw, Lose, Points, GoalsFor, GoalsAgainst, GoalDifference, AdvanceToNextRound }) => 
       <Stats
+        id={id}
         key={id}
         Flag={Flag}
         Country={Country}
