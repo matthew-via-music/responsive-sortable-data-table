@@ -1,0 +1,32 @@
+[
+  {
+    "id": 1,
+    "TeamA": "Croatia",
+    "Score": "1:1",
+    "Penalty Shoot Out": "4:2",
+    "TeamB": "Brazil",
+    "MatchDate": "09.12.22"
+  },
+  {
+    "id": 2,
+    "TeamA": "Netherlands",
+    "Score": "2:2",
+    "Penalty Shoot Out": "3:4",
+    "TeamB": "Argentina",
+    "MatchDate": "09.12.22"
+  },
+  {
+    "id": 3,
+    "TeamA": "Morocco",
+    "Score": "1:0",
+    "TeamB": "Portugal",
+    "MatchDate": "10.12.22"
+  },
+  {
+    "id": 4,
+    "TeamA": "England",
+    "Score": "1:2",
+    "TeamB": "France",
+    "MatchDate": "10.12.22"
+  }
+]

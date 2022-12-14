@@ -1,0 +1,17 @@
+[
+  {
+    "id": 1,
+    "TeamA": "Argentina",
+    "Score": "3:0",
+    "TeamB": "Croatia",
+    "MatchDate": "13.12.22"
+  },
+  {
+    "id": 2,
+    "TeamA": "France",
+    "Score": "",
+    "Penalty Shoot Out": "",
+    "TeamB": "Morocco",
+    "MatchDate": "14.12.22"
+  }
+]

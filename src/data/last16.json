@@ -1,0 +1,60 @@
+[
+  {
+    "id": 1,
+    "TeamA": "Netherlands",
+    "Score": "3:1",
+    "TeamB": "USA",
+    "MatchDate": "03.12.22"
+  },
+  {
+    "id": 2,
+    "TeamA": "Argentina",
+    "Score": "2:1",
+    "TeamB": "Australia",
+    "MatchDate": "03.12.22"
+  },
+  {
+    "id": 3,
+    "TeamA": "France",
+    "Score": "3:1",
+    "TeamB": "Poland",
+    "MatchDate": "04.12.22"
+  },
+  {
+    "id": 4,
+    "TeamA": "England",
+    "Score": "3:0",
+    "TeamB": "Senegal",
+    "MatchDate": "04.12.22"
+  },
+  {
+    "id": 5,
+    "TeamA": "Japan",
+    "Score": "1:1",
+    "Penalty Shoot Out": "3:1",
+    "TeamB": "Crotia",
+    "MatchDate": "05.12.22"
+  },
+  {
+    "id": 6,
+    "TeamA": "Brazil",
+    "Score": "4:1",
+    "TeamB": "Korea Republic",
+    "MatchDate": "05.12.22"
+  },
+  {
+    "id": 7,
+    "TeamA": "Morocco",
+    "Score": "0:0",
+    "Penalty Shoot Out": "3:0",
+    "TeamB": "Spain",
+    "MatchDate": "06.12.22"
+  },
+  {
+    "id": 8,
+    "TeamA": "Portugal",
+    "Score": "6:1",
+    "TeamB": "Switzerland",
+    "MatchDate": "06.12.22"
+  }
+]
