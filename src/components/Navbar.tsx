@@ -7,8 +7,8 @@ function Navbar(props: Props) {
 
   return (
     <ul>
-      <Link to="/"><li>Groups and Matches</li></Link>
-      <Link to="/page2"><li>First Round Stats</li></Link>
+      <Link to="/responsive-sortable-data-table"><li>Groups and Matches</li></Link>
+      <Link to="/responsive-sortable-data-table/page2"><li>First Round Stats</li></Link>
     </ul>
   )
 }

@@ -14,9 +14,9 @@ function App(props: Props) {
     <BrowserRouter>
     <Navbar/>
       <Routes>
-        <Route path="/" element={<Page1 />} />
-        <Route path="/page2" element={<Page2 />} />
-        <Route path="*" element={<Page1 />} />
+        <Route path="/responsive-sortable-data-table" element={<Page1 />} />
+        <Route path="/responsive-sortable-data-table/page2" element={<Page2 />} />
+        <Route path="/responsive-sortable-data-table/*" element={<Page1 />} />
       </Routes>
     </BrowserRouter>
     </>
