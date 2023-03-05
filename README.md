@@ -1,17 +1,7 @@
-`npm create vite@latest`
+# Responsive data table
+## Sortable columns
+## Filtering
+### Data: World Cup Group Stages 2022
 
-```
-cd project_name
+![Preview](./preview.png)
 
-npm install
-npm run dev
-```
-
-`add the following to vite.config.ts before build`
-
-` base: './' `
-
-`npm run build`
-
-
-(Deploy Info)[https://vitejs.dev/guide/static-deploy.html]
